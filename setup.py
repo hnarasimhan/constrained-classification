@@ -1,11 +1,11 @@
 from setuptools import setup
 
 setup(
-    name='constrained_classification',
+    name='complex_performance_metrics',
     version='',
-    packages=['', 'constrained_classification', 'constrained_classification.models',
-              'constrained_classification.solvers', 'constrained_classification.solvers.binary',
-              'constrained_classification.solvers.multiclass'],
+    packages=['', 'complex_performance_metrics', 'complex_performance_metrics.models',
+              'complex_performance_metrics.solvers', 'complex_performance_metrics.solvers.binary',
+              'complex_performance_metrics.solvers.multiclass'],
     url='',
     license='',
     author='harikrishna',
