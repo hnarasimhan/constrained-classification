@@ -7,5 +7,15 @@ Narasimhan., H. "Learning with Complex Loss Functions and Constraints", In Proce
 
 ## Description
 We provide code for two families of constrained classification problems, under complex loss functions and constraints:
-- COCO: **Co**nvex Loss under **Co**nvex Constraints
-- FRACO:  **Fra*ctional Convex Loss under **Co**nvex Constraints
+- **COCO**: **Co**nvex Loss under **Co**nvex Constraints
+- **FRACO**:  **Fra**ctional Convex Loss under **Co**nvex Constraints
+
+
+## Created by
+
+- [Harikrishna Narasimhan](https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home)
+
+
+## License
+
+MIT © [Harikrishna Narasimhan](https://sites.google.com/a/g.harvard.edu/harikrishna-narasimhan/home)
