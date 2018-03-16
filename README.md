@@ -10,7 +10,7 @@ Narasimhan, H.*, Ramaswamy, H. G.*, Saha, A. and Agarwal, S. 'Consistent multicl
 
 
 ## Description
-We provide a package `complex-performance-metrics` that implements the following two algorithms from Narasimhan et al. (2015) for optimizing complex loss functions without constraints:
+We provide a package `complex_performance_metrics` that implements the following two algorithms from Narasimhan et al. (2015) for optimizing complex loss functions without constraints:
 - **Frank-Wolfe** based algorithm for optimizing convex loss functions
 - **Bisection** based algorithm for optimizing fractional-convex loss functions
 
