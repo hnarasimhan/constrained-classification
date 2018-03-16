@@ -6,14 +6,32 @@ Narasimhan., H. "Learning with Complex Loss Functions and Constraints", In Proce
 
 
 ## Description
-We provide code for two families of constrained classification problems, under complex loss functions and constraints:
+We provide a package that implements learning algorithms  for two families of constrained classification problems, under complex loss functions and constraints:
 - **COCO**: **Co**nvex Loss under **Co**nvex Constraints
 - **FRACO**:  **Fra**ctional Convex Loss under **Co**nvex Constraints
+
+The package contains code for optimizing the following loss functions without constraints:
+- H-mean loss
+- Q-mean loss
+- F1-measure loss
+- micro F1 loss
+as well as, for solving the following constrained learning problems:
+- H-mean loss subject to a *Coverage* constraint
+- Q-mean loss subject to a *Demographic Parity* constraint
+- F1-measure loss subject to a *KL-divergence* constraint
+- Q-mean loss subject to a *Normalized Absolute Error* constraint
+- micro F1 loss subject to a *Coverage* constraint
+
+
+## Prerequisites
+- Python (version 2.7 or higher)
+- NumPy
+- scikit-learn
 
 
 ## Usage
 ```
-pip install dist/complex_performance_metrics-1.0.tar.gz
+python setup.py install
 ```
 
 
