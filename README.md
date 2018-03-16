@@ -1,5 +1,4 @@
 # Learning Algorithms for Classification with Complex Losses and Constraints 
-======================
 
 This repository contains code for the paper:
 
