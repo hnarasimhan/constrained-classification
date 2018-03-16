@@ -7,7 +7,7 @@ setup(
               'complex_performance_metrics.solvers', 'complex_performance_metrics.solvers.binary',
               'complex_performance_metrics.solvers.multiclass'],
     url='',
-    license='MIT Licence',
+    license='MIT',
     author='Harikrishna Narasimhan',
     author_email='hnarasimhan@seas.harvard.edu',
     description='Algorithms for learning with complex loss functions and constraints'
