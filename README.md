@@ -15,6 +15,7 @@ The package contains code for optimizing the following loss functions without co
 - Q-mean loss
 - F1-measure loss
 - micro F1 loss
+
 as well as, for solving the following constrained learning problems:
 - H-mean loss subject to a *Coverage* constraint
 - Q-mean loss subject to a *Demographic Parity* constraint
