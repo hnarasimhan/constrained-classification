@@ -45,8 +45,26 @@ python setup.py install
 ```
 
 ## Example Usage
+
+```
+from models.unconstrained import FrankWolfeClassifier
+
+cpe_model = LogisticRegressionCV(solver='liblinear')
+cpe_model.fit(x, y)
+
+classifier = FrankWolfeClassifier('hmean')
+classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+
+hmean_loss = classifier.evaluate_perf(x, y)
 ```
 
+```
+from models.unconstrained import BisectionClassifier
+
+classifier = BisectionClassifier('fmeasure')
+classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=10, cpe_model=cpe_model)
+
+f1_loss = classifier.evaluate_perf(x, y)
 ```
 
 
