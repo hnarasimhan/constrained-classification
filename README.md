@@ -45,12 +45,18 @@ python setup.py install
 ```
 
 ## Example Usage
+The package `models.unconstrained` allows you to fit models that optimize unconstrained complex losses and the package `models.constrained` allows you to  fit models that optimize complex losses under constraints. We begin by first fitting a class probability estimation model such as a logisitc regression to a given NumPy arrays of instances `x` and labels `y`:
 
+```
+from sklearn.linear_model import LogisticRegressionCV
+cpe_model = LogisticRegressionCV(solver='liblinear')
+cpe_model.fit(x, y)
+```
+
+The following code snippet creates a `FrankWolfeClassifier` object and fits a model that optimizes a convex loss function:
 ```
 from models.unconstrained import FrankWolfeClassifier
 
-cpe_model = LogisticRegressionCV(solver='liblinear')
-cpe_model.fit(x, y)
 
 classifier = FrankWolfeClassifier('hmean')
 classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
@@ -58,6 +64,7 @@ classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10
 hmean_loss = classifier.evaluate_perf(x, y)
 ```
 
+The following code snippet creates a `BisectionClassifier` object and fits a model that optimizes a fractional-convex loss function:
 ```
 from models.unconstrained import BisectionClassifier
 
@@ -66,7 +73,6 @@ classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=10, cpe_model=cpe_mode
 
 f1_loss = classifier.evaluate_perf(x, y)
 ```
-
 
 ## Created by
 
