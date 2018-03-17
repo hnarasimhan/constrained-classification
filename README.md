@@ -6,8 +6,9 @@ Narasimhan., H. "Learning with Complex Loss Functions and Constraints", In Proce
 
 The repository also implements algorithms from a previous paper:
 
-Narasimhan, H., Ramaswamy, H. G., Saha, A. and Agarwal, S. 'Consistent multiclass algorithms for complex performance measures'. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015
-(the first two authors are equal contributors).
+Narasimhan, H., Ramaswamy, H. G., Saha, A. and Agarwal, S. 'Consistent multiclass algorithms for complex performance measures'. In Proceedings of the 32nd International Conference on Machine Learning (ICML), 2015.
+
+(the first two authors are equal contributors)
 
 
 ## Description
@@ -50,6 +51,7 @@ The package `models.unconstrained` allows you to fit models that optimize uncons
 
 ```
 from sklearn.linear_model import LogisticRegressionCV
+
 cpe_model = LogisticRegressionCV(solver='liblinear')
 cpe_model.fit(x, y)
 ```
@@ -58,14 +60,13 @@ The following code snippet creates a `FrankWolfeClassifier` object to fit a mode
 ```
 from models.unconstrained import FrankWolfeClassifier
 
-
 classifier = FrankWolfeClassifier('hmean')
 classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
 
 hmean_loss = classifier.evaluate_perf(x, y)
 ```
 
-The following code snippet creates a `BisectionClassifier` object to fit a model that optimizes a fractional-convex loss function  and evaluate its loss:
+The following code snippet creates a `BisectionClassifier` object to fit a model that optimizes a fractional-convex loss function, and to evaluate its loss:
 ```
 from models.unconstrained import BisectionClassifier
 
@@ -73,6 +74,28 @@ classifier = BisectionClassifier('fmeasure')
 classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=10, cpe_model=cpe_model)
 
 f1_loss = classifier.evaluate_perf(x, y)
+```
+
+The following code snippet creates a `COCOClassifier` object to fit a model that optimizes a convex loss function subject to a convex constraint function, and to evaluate its loss and constraint values:
+```
+from models.constrained import COCOClassifier
+
+classifier = COCOClassifier('hmean', 'cov')
+classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+
+hmean = classifier.evaluate_perf(x, y)
+cov = classifier.evaluate_cons(x, y)
+```
+
+The following code snippet creates a `COCOClassifier` object to fit a model that optimizes a convex loss function subject to a convex constraint function, and to evaluate its loss and constraint values:
+```
+from models.constrained import FRACOClassifier
+
+classifier = FRACIClassifier('fmeasure', 'kld')
+classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+
+hmean = classifier.evaluate_perf(x, y)
+cov = classifier.evaluate_cons(x, y)
 ```
 
 ## Created by
