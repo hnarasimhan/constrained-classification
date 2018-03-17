@@ -83,7 +83,7 @@ from models.constrained import COCOClassifier
 classifier = COCOClassifier('hmean', 'cov')
 classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
 
-hmean = classifier.evaluate_perf(x, y)
+hmean_loss = classifier.evaluate_perf(x, y)
 cov = classifier.evaluate_cons(x, y)
 ```
 
@@ -94,8 +94,8 @@ from models.constrained import FRACOClassifier
 classifier = FRACIClassifier('fmeasure', 'kld')
 classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
 
-hmean = classifier.evaluate_perf(x, y)
-cov = classifier.evaluate_cons(x, y)
+f1_loss = classifier.evaluate_perf(x, y)
+kld = classifier.evaluate_cons(x, y)
 ```
 
 ## Created by
