@@ -87,7 +87,7 @@ hmean = classifier.evaluate_perf(x, y)
 cov = classifier.evaluate_cons(x, y)
 ```
 
-The following code snippet creates a `COCOClassifier` object to fit a model that optimizes a convex loss function subject to a convex constraint function, and to evaluate its loss and constraint values:
+The following code snippet creates a `FRACOClassifier` object to fit a model that optimizes a convex loss function subject to a fractional-convex constraint function, and to evaluate its loss and constraint values:
 ```
 from models.constrained import FRACOClassifier
 
