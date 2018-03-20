@@ -23,7 +23,7 @@ def opt_classifier(x, y, z, classifier, cpe_model, alpha):
     return C, CC, classifier
 
 
-def fit(x, y, z, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter=1):
+def fit(x, y, z, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter=None):
     M = len(np.unique(z))
     s = np.ones((M,))
     alpha = np.zeros((M,))

@@ -27,24 +27,8 @@ class RandomizedClassifier:
 
     def normalize_weights(self):
         tot = sum(self.weights)
-        if tot > 0:
+        if tot>0:
             self.weights = [x*1.0/tot for x in self.weights]
-
-    def fit_(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model=None, z=None):
-        # Fit randomized classifier to data
-        if cpe_model is None:
-            cpe_model = LogisticRegressionCV()
-            cpe_model.fit(x, y)
-
-        # Get module for performance measure / constraint
-        module = globals()[self.opt_name + '_' + self.perf_name + '_' + self.cons_name]
-
-        # Check if there is a protected attribute
-        if not self.protected_present:
-            module.fit(x, y, self, cpe_model, eps, eta, max_outer_iter, max_inner_iter)
-        else:
-            self.protected_present = True
-            module.fit(x, y, z, self, cpe_model, eps, eta, max_outer_iter, max_inner_iter)
 
     def evaluate_conf(self, x_ts, y_ts, z_ts=None, use_stored_prob=False):
         # Is protected attribute present
@@ -65,6 +49,22 @@ class RandomizedClassifier:
                 for j in range(M):
                     CC[j, :, :] += self.weights[t] * CC_[j, :, :]
             return C, CC
+
+    def fit(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model=None, z=None):
+        # Fit randomized classifier to data
+        if cpe_model is None:
+            cpe_model = LogisticRegressionCV()
+            cpe_model.fit(x, y)
+
+        # Get module for performance measure / constraint
+        module = globals()[self.opt_name + '_' + self.perf_name + '_' + self.cons_name]
+
+        # Check if there is a protected attribute
+        if not self.protected_present:
+            module.fit(x, y, self, cpe_model, eps, eta, max_outer_iter, max_inner_iter)
+        else:
+            self.protected_present = True
+            module.fit(x, y, z, self, cpe_model, eps, eta, max_outer_iter, max_inner_iter)
 
     def evaluate_perf(self, x_ts, y_ts, z_ts=None):
         if not self.protected_present:

@@ -61,7 +61,7 @@ def coco_fmeasure_kld(x, y, classifier, cpe_model, thresh, eps, eta, max_outer_i
     return classifier, obj
 
 
-def fit(x, y, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter=1):
+def fit(x, y, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter):
     # FRACO, outer bisection method
     lwr = 0
     upr = 1

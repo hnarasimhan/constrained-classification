@@ -7,9 +7,8 @@ class ConstrainedClassifier(RandomizedClassifier):
     def __init__(self, perf_name, cons_name, protected_present=False, num_class=2):
         RandomizedClassifier.__init__(self, perf_name, cons_name, protected_present, num_class)
 
-    def fit(self, x, y, eps, eta, max_outer_iter, max_inner_iter=1, cpe_model=None, z=None):
-        # Fit randomized classifier to data
-        RandomizedClassifier.fit_(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model, z)
+    def fit(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model=None, z=None):
+        RandomizedClassifier.fit(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model, z)
 
     def evaluate_cons(self, x_ts, y_ts, z_ts=None):
         if not self.protected_present:
@@ -31,3 +30,5 @@ class FRACOClassifier(ConstrainedClassifier):
     def __init__(self, perf_name, cons_name, protected_present=False, num_class=2):
         ConstrainedClassifier.__init__(self, perf_name, cons_name, protected_present, num_class)
         self.opt_name = 'fraco'
+
+

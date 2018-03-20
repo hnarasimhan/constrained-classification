@@ -7,15 +7,15 @@ class UnconstrainedClassifier(RandomizedClassifier):
     def __init__(self, perf_name, protected_present=False, num_class=2):
         RandomizedClassifier.__init__(self, perf_name, solvers.PERF_CONS_MAP[perf_name], protected_present, num_class)
 
+    def fit(self, x, y, eps, eta, max_outer_iter, max_inner_iter, cpe_model=None, z=None):
+        RandomizedClassifier.fit(self, x, y, eps, 1, max_outer_iter, max_inner_iter, cpe_model, z)
+
 
 class FrankWolfeClassifier(UnconstrainedClassifier):
     # COCO for optimizing convex losses
     def __init__(self, perf_name, protected_present=False, num_class=2):
         UnconstrainedClassifier.__init__(self, perf_name, protected_present, num_class)
         self.opt_name = 'coco'
-
-    def fit(self, x, y, max_outer_iter, cpe_model=None, z=None):
-        RandomizedClassifier.fit_(self, x, y, 1, 1, max_outer_iter, 1, cpe_model, z)
 
 
 class BisectionClassifier(UnconstrainedClassifier):
@@ -24,6 +24,9 @@ class BisectionClassifier(UnconstrainedClassifier):
         UnconstrainedClassifier.__init__(self, perf_name, protected_present, num_class)
         self.opt_name = 'fraco'
 
-    def fit(self, x, y, cpe_model=None, z=None):
-        RandomizedClassifier.fit_(self, x, y, 1, 1, 1, 1, cpe_model, z)
 
+class LinClassifier(UnconstrainedClassifier):
+    # COCO for optimizing linear losses
+    def __init__(self, perf_name, protected_present=False, num_class=2):
+        UnconstrainedClassifier.__init__(self, perf_name, protected_present, num_class)
+        self.opt_name = 'err'
