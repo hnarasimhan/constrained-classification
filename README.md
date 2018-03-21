@@ -27,6 +27,7 @@ The package implements the following algorithms from Narasimhan (2018) for two f
 - **FRACO**:  **Fra**ctional Convex Loss under **Co**nvex Constraints
 
 and covers the following constrained learning problems:
+- 0-1 classification loss subject to a *Demographic Parity* constraint
 - H-mean loss subject to a *Coverage* constraint
 - Q-mean loss subject to a *Demographic Parity* constraint
 - F1-measure loss subject to a *KL-divergence* constraint
@@ -97,6 +98,13 @@ classifier.fit(x, y, eps = 0.1, eta = 0.1, num_outer_iter=100, num_inner_iter=10
 f1_loss = classifier.evaluate_loss(x, y)
 kld = classifier.evaluate_cons(x, y)
 ```
+
+## Demo Code
+The file `complex_performance_metrics/run_demo.py` contains demo code for running experiments with constrained and unconstrained classification on the different data set in the folder `complex_performance_metrics/data`. The code takes user inputs from terminal and can be executed using:
+```
+python run_demo.py
+```
+
 
 ## Created by
 
