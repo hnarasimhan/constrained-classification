@@ -4,6 +4,7 @@ from complex_performance_metrics.solvers.binary import \
     coco_hmean_cov, coco_qmean_dp, coco_err_dp, fraco_fmeasure_kld
 from complex_performance_metrics.solvers.multiclass import \
     coco_qmean_nae, fraco_microF1_cov
+import complex_performance_metrics.solvers as solvers
 import complex_performance_metrics.utils as utils
 
 
@@ -86,6 +87,22 @@ class RandomizedClassifier:
            cpe_model (sklearn estimator): A model with a predict_proba() function (default: None)
            z (array-like, dtype = int, shape=(m,)): Protected attribute {0,..M} (default: None)
         """
+        # Raise exception if eps is not in [0,1]
+        if eps < 0 or eps > solvers.CONS_UPPER[self.cons_name]:
+            raise RuntimeError('Parameter eps needs be between 0 and '
+                               + str(solvers.CONS_UPPER[self.cons_name])
+                               + ' for ' + self.cons_name)
+
+        # Raise exception if eta is non-positive
+        if eta < 0:
+            raise RuntimeError('Parameter eta needs to be a positive floating-point number')
+
+        # Raise exception if iteration counts are non-positive
+        if num_outer_iter < 0:
+            raise RuntimeError('Parameter num_outer_iter needs to be a positive integer')
+        if num_inner_iter < 0:
+            raise RuntimeError('Parameter num_inner_iter needs to be a positive integer')
+
         # If cpe_model not specified, fit a LogReg model
         if cpe_model is None:
             cpe_model = LogisticRegressionCV()
