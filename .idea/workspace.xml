@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6bfea5c-d1ed-4c6f-aafa-ca2f2a5f14f8" name="Default" comment="deleted old plots">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/batch/hmean-cov-batch.txt" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/batch/hmean-cov-batch.txt" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/plots/hmean-cov-crimes2-batch.npy" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2-batch.npy" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/plots/hmean-cov-crimes2.eps" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2.eps" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
-      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/test.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/expt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/batch/hmean-cov-batch.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2-batch.npy" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2.eps" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/test.py" afterPath="" />
     </list>
     <ignored path="venv/include/python2.7/" />
     <ignored path="venv/lib/python2.7/config/" />
@@ -35,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="expt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="expt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4412">
+            <state relative-caret-position="180">
               <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -57,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -769,21 +766,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4412">
+        <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
