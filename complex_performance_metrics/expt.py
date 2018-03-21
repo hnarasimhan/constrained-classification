@@ -64,23 +64,23 @@ def run_expt(loss_name, cons_name, data_name, expt_param, solver_param, eps=1):
         solver_param['algo'] = ALGO_FRACO
         if expt_param['verbosity']:
             print('Running FRACO for optimizing ' + loss_name +
-                  ' s.t. ' + cons_name + ' constraint on ' +
-                  data_name + ' dataset\n')
+                  (' s.t. ' + cons_name + ' constraint' if cons_name != '' else '')
+                  + ' on ' + data_name + ' dataset\n')
     else:
         solver_param['algo'] = ALGO_COCO
         if expt_param['verbosity']:
             print('Running COCO for optimizing ' + loss_name +
-                  ' s.t. ' + cons_name + ' constraint on '
-                  + data_name + ' dataset\n')
+                  (' s.t. ' + cons_name + ' constraint ' if cons_name != '' else '')
+                  + ' on ' + data_name + ' dataset\n')
 
     # Load data set
     data = np.loadtxt('data/' + data_name + '.data', delimiter=',')
 
     # Run either constrained or unconstrained solver
-    if cons_name is not None:
+    if cons_name != '':
         return run_expt_con(data, loss_name, cons_name, eps, expt_param, solver_param)
     else:
-        return run_expt(data, loss_name, expt_param, solver_param)
+        return run_expt_unc(data, loss_name, expt_param, solver_param)
 
 
 def run_expt_con(data, loss_name, cons_name, eps, expt_param, solver_param):
