@@ -1,86 +1,141 @@
 import numpy as np
 
 
-# Generic function call for performance measure / constraints
+"""
+This module contains functions for computing different loss and constraint functions
+"""
+
 def evaluate_metric(metric_name, C):
-        metric_fun = globals()[metric_name]
-        return metric_fun(C)
+    """
+    Generic function to evaluate a metric
+
+    Attributes:
+        metric_name (string): Name of metric
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        metric (float): Metric value
+    """
+    if metric_name not in globals():
+        raise KeyError('Metric name not found')
+    metric_fun = globals()[metric_name]
+    return metric_fun(C)
 
 
-# Function definitions for performance measures
 def err(C):
-    # Calculate classification error
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        loss (float): 0-1 classification error
+    """
     return 1 - np.trace(C)
 
 
 def hmean(C):
-    # Calculate H-mean
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        loss (float): H-mean loss
+    """
     tpr = C[1, 1] * 1.0 / (C[1, 0] + C[1, 1])
     tnr = C[0, 0] * 1.0 / (C[0, 0] + C[0, 1])
-    return 2.0 * tpr * tnr / (tpr + tnr)
+    return 1.0 - 2.0 * tpr * tnr / (tpr + tnr)
 
 
 def fmeasure(C):
-   # Calculate F1-measure
-   if C[0, 1] + C[1, 1] > 0:
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        loss (float): F-measure loss
+    """
+    if C[0, 1] + C[1, 1] > 0:
        prec = C[1, 1] * 1.0 / (C[0, 1] + C[1, 1])
-   else:
+    else:
        prec = 1.0
-   rec = C[1, 1] * 1.0 / (C[1, 0] + C[1, 1])
-   if prec + rec == 0:
-       return 1.0
-   else:
-       return 2 * prec * rec / (prec + rec)
+    rec = C[1, 1] * 1.0 / (C[1, 0] + C[1, 1])
+    if prec + rec == 0:
+       return 0.0
+    else:
+       return 1.0 - 2 * prec * rec / (prec + rec)
 
 
 def qmean(C):
-    # Calculate multi-class Q-mean
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        loss (float): Q-mean loss
+    """
     n = C.shape[0]
     qm = 0.0
     for i in range(n):
         qm = qm + (1 - C[i, i] / C[i, :].sum()) ** 2 / n
-    return 1-np.sqrt(qm)
+    return np.sqrt(qm)
 
 
 def microF1(C):
-    # Calculate multi-class microF1
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        loss (float): microF1 loss
+    """
     n = C.shape[0]
     num = 0
     for i in range(1, n):
         num += 2.0 * C[i, i]
     dem = 2 - C[0, :].sum() - C[:, 0].sum()
     if dem == 0:
-        return 1.0
+        return 0.0
     else:
-        return num / (2 - C[0, :].sum() - C[:, 0].sum())
+        return 1.0 - num / dem
 
 
-# Function definitions for constraint functions
 def cov(C):
-    # Calculate Coverage
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        cons (float): Coverage constraint function value
+    """
     return 1 - C[:, 0].sum() # C[0, 1] + C[1, 1]
 
 
 def dp(CC):
-   # Calculate Demographic Parity
-   M = CC.shape[0]
-   C_mean = np.zeros((2, 2))
-   dparity = np.zeros((M, 1))
-   for j in range(M):
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        cons (float): Demographic parity constraint function value
+    """
+    M = CC.shape[0]
+    C_mean = np.zeros((2, 2))
+    dparity = np.zeros((M, 1))
+    for j in range(M):
        C_mean += CC[j, :, :].reshape((2, 2)) * 1.0 / M
-   for j in range(M):
+    for j in range(M):
        dparity[j] = CC[j, 0, 1] + CC[j, 1, 1] - C_mean[0, 1] - C_mean[1, 1]
-   return np.abs(dparity).max()
-
-
-def eo(C0, C1):
-    # Calculate Equal Odds
-    return np.max([np.abs(C0[0, 1] / C0[0, :].sum() - C1[0, 1] / C1[0, :].sum()),
-                   np.abs(C0[1, 0] / C0[1, :].sum() - C1[1, 0] / C1[1, :].sum())])  # / (1-p) / p) * 0.5
+    return np.abs(dparity).max()
 
 
 def kld(C):
-    # Calculate KL-divergence quantization loss
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        cons (float): Binary KL-divergence constraint value
+    """
     eps = 0.0001
     C = C * 1.0 / C.sum()
     p = max([min([C[1, :].sum(), 1 - eps]), eps])
@@ -89,10 +144,16 @@ def kld(C):
 
 
 def nae(C):
-    # Calculate multi-class NAE quantization measure
+    """
+    Attributes:
+        C (array-like, dtype=float, shape=(n,n)): Confusion matrix
+
+    Returns:
+        cons (float): Multi-class normalized absolute error constraint value
+    """
     n = C.shape[0]
     er = 0.0
     p = np.sum(C, axis=1)
     for i in range(n):
-        er += np.abs(C[:, i].sum() - p[i])  # / n
+        er += np.abs(C[:, i].sum() - p[i])
     return er * 0.5 / (1 - np.min(p))

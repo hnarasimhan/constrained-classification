@@ -49,7 +49,7 @@ def coco_microF1_cov(x, y, classifier, cpe_model, thresh, eps, eta, max_iter):
     return C
 
 
-def fit(x, y, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter=None):
+def fit(x, y, classifier, cpe_model, eps, eta, num_outer_iter, num_inner_iter=None):
     # FRACO, outer bisection method
     lwr = 0
     upr = 1
@@ -58,9 +58,9 @@ def fit(x, y, classifier, cpe_model, eps, eta, max_outer_iter, max_inner_iter=No
         thresh = (lwr + upr) / 2.0
 
         C = coco_microF1_cov(
-            x, y, classifier, cpe_model, thresh, eps, eta, max_outer_iter)
+            x, y, classifier, cpe_model, thresh, eps, eta, num_outer_iter)
 
-        fm = microF1(C)
+        fm = 1.0 - microF1(C)
 
         if fm < thresh:
             upr = thresh

@@ -61,9 +61,9 @@ The following code snippet creates a `FrankWolfeClassifier` object to fit a mode
 from models.unconstrained import FrankWolfeClassifier
 
 classifier = FrankWolfeClassifier('hmean')
-classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+classifier.fit(x, y, eps = 0.1, eta = 0.1, num_outer_iter=100, num_inner_iter=10, cpe_model=cpe_model)
 
-hmean_loss = classifier.evaluate_perf(x, y)
+hmean_loss = classifier.evaluate_loss(x, y)
 ```
 
 The following code snippet creates a `BisectionClassifier` object to fit a model that optimizes a fractional-convex loss function, and to evaluate its loss:
@@ -71,9 +71,9 @@ The following code snippet creates a `BisectionClassifier` object to fit a model
 from models.unconstrained import BisectionClassifier
 
 classifier = BisectionClassifier('fmeasure')
-classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=10, cpe_model=cpe_model)
+classifier.fit(x, y, eps = 0.1, eta = 0.1, num_outer_iter=10, cpe_model=cpe_model)
 
-f1_loss = classifier.evaluate_perf(x, y)
+f1_loss = classifier.evaluate_loss(x, y)
 ```
 
 The following code snippet creates a `COCOClassifier` object to fit a model that optimizes a convex loss function subject to a convex constraint function, and to evaluate its loss and constraint values:
@@ -81,9 +81,9 @@ The following code snippet creates a `COCOClassifier` object to fit a model that
 from models.constrained import COCOClassifier
 
 classifier = COCOClassifier('hmean', 'cov')
-classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+classifier.fit(x, y, eps = 0.1, eta = 0.1, num_outer_iter=100, num_inner_iter=10, cpe_model=cpe_model)
 
-hmean_loss = classifier.evaluate_perf(x, y)
+hmean_loss = classifier.evaluate_loss(x, y)
 cov = classifier.evaluate_cons(x, y)
 ```
 
@@ -92,9 +92,9 @@ The following code snippet creates a `FRACOClassifier` object to fit a model tha
 from models.constrained import FRACOClassifier
 
 classifier = FRACIClassifier('fmeasure', 'kld')
-classifier.fit(x, y, eps = 0.1, eta = 0.1, max_outer_iter=100, max_inner_iter=10, cpe_model=cpe_model)
+classifier.fit(x, y, eps = 0.1, eta = 0.1, num_outer_iter=100, num_inner_iter=10, cpe_model=cpe_model)
 
-f1_loss = classifier.evaluate_perf(x, y)
+f1_loss = classifier.evaluate_loss(x, y)
 kld = classifier.evaluate_cons(x, y)
 ```
 

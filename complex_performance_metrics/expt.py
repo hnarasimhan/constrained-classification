@@ -13,15 +13,14 @@ import utils
 
 ALGO_COCO = 0
 ALGO_FRACO = 1
-ALGO_LIN = 2
 
 
 def batch_expts(setting_list, expt_param, solver_param):
-    for (perf_name, cons_name, data_name, eps) in setting_list:
+    for (loss_name, cons_name, data_name, eps) in setting_list:
         if expt_param['verbosity']:
-            print (perf_name, cons_name, data_name, eps)
+            print (loss_name, cons_name, data_name, eps)
 
-        if (perf_name == 'fmeasure') or (perf_name == 'microF1'):
+        if (loss_name == 'fmeasure') or (loss_name == 'microF1'):
             solver_param['algo'] = ALGO_FRACO
         else:
             solver_param['algo'] = ALGO_COCO
@@ -29,34 +28,34 @@ def batch_expts(setting_list, expt_param, solver_param):
 
         data = np.loadtxt('data/' + data_name + '.data', delimiter=',')
 
-        avg_perf_cc, avg_cons_cc, avg_runtime_cc, avg_perf_cpe, avg_cons_cpe = \
-            run_expt(data, perf_name, cons_name, expt_param, solver_param)
+        avg_loss_cc, avg_cons_cc, avg_runtime_cc, avg_loss_cpe, avg_cons_cpe = \
+            run_expt(data, loss_name, cons_name, expt_param, solver_param)
 
-        avg_perf_unc, avg_cons_unc, avg_runtime_unc = \
-            run_expt_unc(data, perf_name, cons_name, expt_param, solver_param)
+        avg_loss_unc, avg_cons_unc, avg_runtime_unc = \
+            run_expt_unc(data, loss_name, cons_name, expt_param, solver_param)
 
         summary = '{} & {:.2f} & {:.2f} ({:.3f}) & {:.2f} ({:.3f}) & {:.2f} ({:.3f})\n'.format(
             data_name,
-            eps, 1-avg_perf_cc[0], avg_cons_cc[0],
-            1-avg_perf_unc, avg_cons_unc,
-            1-avg_perf_cpe, avg_cons_cpe
+            eps, 1-avg_loss_cc[0], avg_cons_cc[0],
+            1-avg_loss_unc, avg_cons_unc,
+            1-avg_loss_cpe, avg_cons_cpe
             )
 
         if expt_param['verbosity']:
             print summary
 
-        np.save('results/' + perf_name + '-' + cons_name + '-' + data_name + '-batch',
+        np.save('results/' + loss_name + '-' + cons_name + '-' + data_name + '-batch',
                 (expt_param, solver_param,
-                 avg_perf_cc, avg_cons_cc, avg_runtime_cc,
-                 avg_perf_unc, avg_cons_unc, avg_runtime_unc,
-                 avg_perf_cpe, avg_cons_cpe))
+                 avg_loss_cc, avg_cons_cc, avg_runtime_cc,
+                 avg_loss_unc, avg_cons_unc, avg_runtime_unc,
+                 avg_loss_cpe, avg_cons_cpe))
 
-        result_file = open('results/batch/' + perf_name + '-' + cons_name + '-batch.txt', 'a')
+        result_file = open('results/batch/' + loss_name + '-' + cons_name + '-batch.txt', 'a')
         result_file.write(summary)
 
 
-def plot_expts(perf_name, cons_name, data_name, expt_param, solver_param):
-    if (perf_name == 'fmeasure') or (perf_name == 'microF1'):
+def plot_expts(loss_name, cons_name, data_name, expt_param, solver_param):
+    if (loss_name == 'fmeasure') or (loss_name == 'microF1'):
         solver_param['algo'] = ALGO_FRACO
     else:
         solver_param['algo'] = ALGO_COCO
@@ -64,11 +63,11 @@ def plot_expts(perf_name, cons_name, data_name, expt_param, solver_param):
     data = np.loadtxt('data/' + data_name + '.data', delimiter=',')
 
     if expt_param['verbosity']:
-        print perf_name, 's.t.', cons_name, '<= eps :', data_name
+        print loss_name, 's.t.', cons_name, '<= eps :', data_name
         print 'Unconstrained'
 
-    perf_unc, cons_unc, _ = \
-        run_expt_unc(data, perf_name, cons_name, expt_param, solver_param)
+    loss_unc, cons_unc, _ = \
+        run_expt_unc(data, loss_name, cons_name, expt_param, solver_param)
 
     max_beta = cons_unc
     eps_list = np.arange(max_beta * 1.0 / 6.0, max_beta - 0.00001, max_beta * 1.0 / expt_param['num_ticks'])
@@ -78,16 +77,16 @@ def plot_expts(perf_name, cons_name, data_name, expt_param, solver_param):
         print 'eps:', eps_list
 
     solver_param['eps_list'] = eps_list
-    perf_cc, cons_cc, _, perf_cpe, cons_cpe = \
-        run_expt(data, perf_name, cons_name, expt_param, solver_param)
+    loss_cc, cons_cc, _, loss_cpe, cons_cpe = \
+        run_expt(data, loss_name, cons_name, expt_param, solver_param)
 
     # Plot figures
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 3))
 
-    perf_list = {'hmean': 'H-mean Loss', 'fmeasure': 'F1 Loss', 'qmean': 'Q-mean Loss', 'microF1': 'Micro F1 Loss'}
+    loss_list = {'hmean': 'H-mean Loss', 'fmeasure': 'F1 Loss', 'qmean': 'Q-mean Loss', 'microF1': 'Micro F1 Loss'}
     cons_list = {'cov': 'Coverage', 'kld': 'KLD error', 'dp': 'Demographic Parity', 'nae': 'NAE'}
 
-    if perf_name == 'fmeasure' or perf_name == 'microF1':
+    if loss_name == 'fmeasure' or loss_name == 'microF1':
         label1 = 'FRACO'
         label2 = 'BS-unc'
         label3 = 'LogReg'
@@ -96,11 +95,11 @@ def plot_expts(perf_name, cons_name, data_name, expt_param, solver_param):
         label2 = 'FW-unc'
         label3 = 'LogReg'
 
-    ax1.plot(cons_cc, [1-x for x in perf_cc], '^', markersize=8, label=label1)
+    ax1.plot(cons_cc, [1-x for x in loss_cc], '^', markersize=8, label=label1)
     ax1.set_xlabel(cons_list[cons_name], fontsize=14)
-    ax1.set_ylabel(perf_list[perf_name], fontsize=14)
-    ax1.plot(cons_unc, 1-perf_unc, 'ro', markersize=8, label=label2)  # unconstrained
-    ax1.plot(cons_cpe, 1-perf_cpe, 'gs', markersize=8, label=label3)
+    ax1.set_ylabel(loss_list[loss_name], fontsize=14)
+    ax1.plot(cons_unc, 1-loss_unc, 'ro', markersize=8, label=label2)  # unconstrained
+    ax1.plot(cons_cpe, 1-loss_cpe, 'gs', markersize=8, label=label3)
 
     x_min = min(min(min(cons_cc), cons_unc), cons_cpe)
     x_max = max(max(max(cons_cc), cons_unc), cons_cpe)
@@ -119,14 +118,14 @@ def plot_expts(perf_name, cons_name, data_name, expt_param, solver_param):
     plt.tight_layout()
     ax1.set_title(data_name, fontsize=14)
 
-    plt.savefig('results/plots/' + perf_name + '-' + cons_name +
+    plt.savefig('results/plots/' + loss_name + '-' + cons_name +
                 '-' + data_name + '.eps', format='eps')
 
-    np.save('results/plots/' + perf_name + '-' + cons_name + '-' + data_name + '-fig',
-            (expt_param, solver_param, perf_cc, cons_cc, perf_unc, perf_cpe, cons_cpe))
+    np.save('results/plots/' + loss_name + '-' + cons_name + '-' + data_name + '-fig',
+            (expt_param, solver_param, loss_cc, cons_cc, loss_unc, loss_cpe, cons_cpe))
 
 
-def run_expt(data, perf_name, cons_name, expt_param, solver_param):
+def run_expt(data, loss_name, cons_name, expt_param, solver_param):
     # Run experiment for 5 different train-test splits
     np.random.seed(1)
 
@@ -138,8 +137,8 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
     eps_list = solver_param['eps_list']
     eta_list = solver_param['eta_list']
     algo = solver_param['algo']
-    max_outer_iter = solver_param['max_outer_iter']
-    max_inner_ter = solver_param['max_inner_iter']
+    num_outer_iter = solver_param['num_outer_iter']
+    max_inner_ter = solver_param['num_inner_iter']
 
     num_class = len(np.unique(data[:, 0]))
 
@@ -148,10 +147,10 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
 
     num_eps = len(eps_list)
 
-    avg_perf_cc = [0] * num_eps
+    avg_loss_cc = [0] * num_eps
     avg_cons_cc = [0] * num_eps
     run_times = [0] * num_eps
-    avg_perf_cpe = 0
+    avg_loss_cpe = 0
     avg_cons_cpe = 0
 
     gc.enable()
@@ -194,10 +193,10 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
         else:
             baseline_classifier = MulticlassPluginClassifier(cpe_model, num_class=num_class)
 
-        logreg_perf = baseline_classifier.evaluate_perf(perf_name, x_ts, y_ts, z_ts)
+        logreg_perf = baseline_classifier.evaluate_loss(loss_name, x_ts, y_ts, z_ts)
         logreg_cons = baseline_classifier.evaluate_cons(cons_name, x_ts, y_ts, z_ts)
 
-        avg_perf_cpe += logreg_perf * 1.0 / num_trials
+        avg_loss_cpe += logreg_perf * 1.0 / num_trials
         avg_cons_cpe += logreg_cons * 1.0 / num_trials
 
         print 'LogReg'
@@ -221,16 +220,16 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
 
             for kk in range(num_eta):
                 if algo == ALGO_COCO:
-                    eta_classifier[kk] = COCOClassifier(perf_name, cons_name, is_protected, num_class)
+                    eta_classifier[kk] = COCOClassifier(loss_name, cons_name, is_protected, num_class)
                 elif algo == ALGO_FRACO:
-                    eta_classifier[kk] = FRACOClassifier(perf_name, cons_name, is_protected, num_class)
+                    eta_classifier[kk] = FRACOClassifier(loss_name, cons_name, is_protected, num_class)
 
                 start_time = time()
                 eta_classifier[kk].fit(x, y, eps_list[jj], eta_list[kk],
-                                       max_outer_iter, max_inner_ter, cpe_model, z)
+                                       num_outer_iter, max_inner_ter, cpe_model, z)
                 eta_run_time[kk] = time() - start_time
 
-                eta_perf[kk] = eta_classifier[kk].evaluate_perf(x, y, z)
+                eta_perf[kk] = eta_classifier[kk].evaluate_loss(x, y, z)
                 eta_cons[kk] = eta_classifier[kk].evaluate_cons(x, y, z)
 
                 if verbosity:
@@ -242,12 +241,12 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
             best_eta_ind = choose_best_eta(eta_perf, eta_cons, eps_list[jj], eta_list)
             best_classifier = eta_classifier[best_eta_ind]
 
-            best_perf = best_classifier.evaluate_perf(x_ts, y_ts, z_ts)
+            best_perf = best_classifier.evaluate_loss(x_ts, y_ts, z_ts)
             best_cons = best_classifier.evaluate_cons(x_ts, y_ts, z_ts)
             if verbosity:
                 print 'best eta =', eta_list[best_eta_ind], ':', 1-best_perf, best_cons, '\n'
 
-            avg_perf_cc[jj] += best_perf * 1.0 / num_trials
+            avg_loss_cc[jj] += best_perf * 1.0 / num_trials
             avg_cons_cc[jj] += best_cons * 1.0 / num_trials
             run_times[jj] += eta_run_time[best_eta_ind] * 1.0 / num_trials
 
@@ -255,12 +254,12 @@ def run_expt(data, perf_name, cons_name, expt_param, solver_param):
 
     if verbosity:
         for jj in range(num_eps):
-            print 'eps =', eps_list[jj], ':', 1-avg_perf_cc[jj], avg_cons_cc[jj], '(', run_times[jj], 's)'
+            print 'eps =', eps_list[jj], ':', 1-avg_loss_cc[jj], avg_cons_cc[jj], '(', run_times[jj], 's)'
 
-    return avg_perf_cc, avg_cons_cc, run_times, avg_perf_cpe, avg_cons_cpe
+    return avg_loss_cc, avg_cons_cc, run_times, avg_loss_cpe, avg_cons_cpe
 
 
-def run_expt_unc(data, perf_name, cons_name, expt_param, solver_param):
+def run_expt_unc(data, loss_name, cons_name, expt_param, solver_param):
     # Run experiment for 5 different train-test splits
     np.random.seed(1)
 
@@ -270,14 +269,14 @@ def run_expt_unc(data, perf_name, cons_name, expt_param, solver_param):
     verbosity = expt_param['verbosity']
 
     algo = solver_param['algo']
-    max_inner_ter = solver_param['max_inner_iter']
+    max_inner_ter = solver_param['num_inner_iter']
 
     num_class = len(np.unique(data[:, 0]))
 
     n = data.shape[0]
     n_tr = int(np.round(n * training_frac))
 
-    avg_perf_unc = 0.0
+    avg_loss_unc = 0.0
     avg_cons_unc = 0.0
     avg_run_time = 0.0
 
@@ -307,15 +306,15 @@ def run_expt_unc(data, perf_name, cons_name, expt_param, solver_param):
         cpe_model.fit(x, y)
 
         if algo == ALGO_COCO:
-            classifier = FrankWolfeClassifier(perf_name, protected_present=is_protected, num_class=num_class)
+            classifier = FrankWolfeClassifier(loss_name, protected_present=is_protected, num_class=num_class)
         else:
-            classifier = BisectionClassifier(perf_name, protected_present=is_protected, num_class=num_class)
+            classifier = BisectionClassifier(loss_name, protected_present=is_protected, num_class=num_class)
 
         start_time = time()
         classifier.fit(x, y, 1, 0, 1, max_inner_ter, cpe_model, z)
         run_time = time() - start_time
 
-        perf = classifier.evaluate_perf(x_ts, y_ts, z_ts)
+        perf = classifier.evaluate_loss(x_ts, y_ts, z_ts)
         if is_protected:
             _, C = classifier.evaluate_conf(x_ts, y_ts, z_ts)
         else:
@@ -325,20 +324,20 @@ def run_expt_unc(data, perf_name, cons_name, expt_param, solver_param):
         if verbosity:
             print 'Trial', ii+1, ':', perf, cons
 
-        avg_perf_unc += perf * 1.0 / num_trials
+        avg_loss_unc += perf * 1.0 / num_trials
         avg_cons_unc += cons * 1.0 / num_trials
         avg_run_time += run_time * 1.0 / num_trials
 
     if verbosity:
-        print 'avg:', 1-avg_perf_unc, avg_cons_unc, '(', avg_run_time, 's)'
+        print 'avg:', 1-avg_loss_unc, avg_cons_unc, '(', avg_run_time, 's)'
 
-    return avg_perf_unc, avg_cons_unc, avg_run_time
+    return avg_loss_unc, avg_cons_unc, avg_run_time
 
 
-def choose_best_eta(perf_list, cons_list, eps, eta_list):
+def choose_best_eta(loss_list, cons_list, eps, eta_list):
     # Heuristic to choose index of the best eta param given their corresponding performance, constraint values
-    valid_perf = [perf_list[ind] for ind in range(len(perf_list))\
+    valid_perf = [loss_list[ind] for ind in range(len(loss_list))\
                  if cons_list[ind] <= 1.05*eps]
     if len(valid_perf) > 0:
-        return perf_list.index(max(valid_perf))
+        return loss_list.index(max(valid_perf))
     return np.argmin([abs(x - eps) for x in cons_list])

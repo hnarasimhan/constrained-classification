@@ -3,7 +3,7 @@ from expt import batch_expts, plot_expts
 
 expt_param = {'training_frac': 2.0/3.0, 'num_trials': 5, 'verbosity': True, 'num_ticks': 6}
 
-solver_param = {'eta_list': [0.01,0.1,1,10,100,1000], 'max_inner_iter': 10, 'max_outer_iter': 100}
+solver_param = {'eta_list': [0.01,0.1,1,10,100,1000], 'num_inner_iter': 10, 'num_outer_iter': 100}
 
 warnings.filterwarnings("ignore")
 

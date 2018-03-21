@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6bfea5c-d1ed-4c6f-aafa-ca2f2a5f14f8" name="Default" comment="deleted old plots" />
+    <list default="true" id="e6bfea5c-d1ed-4c6f-aafa-ca2f2a5f14f8" name="Default" comment="deleted old plots">
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="venv/include/python2.7/" />
     <ignored path="venv/lib/python2.7/config/" />
     <ignored path="venv/lib/python2.7/encodings/" />
@@ -15,56 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="unconstrained.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="randomized_classifier.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="94" lean-forward="false" selection-start-line="1" selection-start-column="94" selection-end-line="1" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coco_qmean_nae.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/coco_qmean_nae.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="146">
+              <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -73,18 +31,8 @@
       <file leaf-file-name="coco_hmean_cov.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fraco_microF1_cov.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/fraco_microF1_cov.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+            <state relative-caret-position="193">
+              <caret line="99" column="10" lean-forward="false" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="47" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -92,23 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fraco_fmeasure_kld.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py">
+      <file leaf-file-name="coco_qmean_dp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_qmean_dp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1695">
+              <caret line="113" column="70" lean-forward="false" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="constrained.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
+      <file leaf-file-name="coco_qmean_nae.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/coco_qmean_nae.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+            <state relative-caret-position="120">
+              <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +67,20 @@
       <file leaf-file-name="coco_err_dp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="407">
+              <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fraco_microF1_cov.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/fraco_microF1_cov.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -135,14 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LogisticRegressionCV</find>
-      <find>logist</find>
-      <find>protected_attribute</find>
-      <find>utils</find>
-      <find>_unc</find>
-      <find>expt_unc</find>
-      <find>protected_present</find>
-      <find>is_p</find>
       <find>.fit(</find>
       <find>1:</find>
       <find>metrics</find>
@@ -152,12 +106,41 @@
       <find>complex_performance_metrics</find>
       <find>constrained_classification</find>
       <find>load</find>
+      <find>obj</find>
+      <find>predic</find>
+      <find>cpe_</find>
+      <find>f</find>
+      <find>max_</find>
+      <find>array_like</find>
+      <find>utils</find>
+      <find>perf_</find>
+      <find>_perf</find>
+      <find>evaluate_perf</find>
+      <find>stror</find>
+      <find>(x)</find>
+      <find>module</find>
+      <find>loss</find>
+      <find>fit</find>
+      <find>fit(</find>
+      <find>max_inner</find>
+      <find>max_inner_iter</find>
+      <find>max_outer_iter</find>
+      <find>qmean</find>
+      <find>protec</find>
     </findStrings>
     <replaceStrings>
       <replace>protected_present</replace>
       <replace>UnconstrainedClassifier</replace>
       <replace>constrained-classification</replace>
       <replace>complex_performance_metrics</replace>
+      <replace>num_</replace>
+      <replace>loss_</replace>
+      <replace>_loss</replace>
+      <replace>evaluate_loss</replace>
+      <replace>array-like</replace>
+      <replace>num_inner_iter</replace>
+      <replace>num_outer_iter</replace>
+      <replace>num_inner</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -183,18 +166,27 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/__main__.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/models/constrained.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/models/plugin.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/test.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/fraco_microF1_cov.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/expt.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/utils.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_qmean_dp.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/coco_qmean_nae.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1600" />
-    <option name="height" value="806" />
+    <option name="width" value="800" />
+    <option name="height" value="506" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,7 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +247,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,13 +405,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="806" extended-state="6" />
+    <frame x="0" y="23" width="1152" height="642" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17479417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24403183" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3755274" sideWeight="0.39582014" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3755274" sideWeight="0.60417986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.39964634" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630098" sideWeight="0.48891702" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.60035366" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206751" sideWeight="0.43255225" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -432,7 +425,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630098" sideWeight="0.48891702" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -538,29 +530,9 @@
     <entry file="file://$PROJECT_DIR$/constrained_classification/batch_err.py" />
     <entry file="file://$PROJECT_DIR$/venv/__init__.py" />
     <entry file="file://$PROJECT_DIR$/constrained_classification/generate_plot_err.py" />
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_qmean_dp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/data/compas.txt" />
     <entry file="file://$PROJECT_DIR$/constrained-classification/batch.py" />
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/README.md" />
     <entry file="file://$PROJECT_DIR$/constrained-classification/generate_plot.py" />
     <entry file="file://$PROJECT_DIR$/constrained-classification/complex_performance_metrics/models/randomized_classifier.py" />
     <entry file="file://$PROJECT_DIR$/constrained-classification/complex_performance_metrics/__init__.py" />
@@ -579,14 +551,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/__main__.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="584">
@@ -595,28 +560,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="false" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="164" column="34" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="164" selection-end-column="34" />
+        <state relative-caret-position="15">
+          <caret line="1" column="96" lean-forward="false" selection-start-line="1" selection-start-column="96" selection-end-line="1" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/__init__.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/plugin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -629,116 +608,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/__init__.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/plugin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-536">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/__init__.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/coco_qmean_nae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="1095">
+          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="710">
+          <caret line="72" column="34" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="72" selection-end-column="34" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="180">
+          <caret line="87" column="11" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="87" selection-end-column="11" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="99" column="10" lean-forward="false" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_qmean_dp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="113" column="70" lean-forward="false" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/coco_qmean_nae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/fraco_microF1_cov.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="94" lean-forward="false" selection-start-line="1" selection-start-column="94" selection-end-line="1" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
