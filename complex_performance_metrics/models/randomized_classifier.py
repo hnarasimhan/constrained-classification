@@ -111,7 +111,7 @@ class RandomizedClassifier:
         # Get module for performance measure / constraint, raise exception if solver not available
         module_name = self.opt_name + '_' + self.loss_name + '_' + self.cons_name
         if module_name not in globals():
-            raise KeyError('No solver found for optimizing ' + self.loss_name + ' under ' + self.cons_name + 'constraint')
+            raise KeyError('No solver found for optimizing ' + self.loss_name + ' under ' + self.cons_name + ' constraint')
         module = globals()[module_name]
 
         # Check if there is a protected attribute

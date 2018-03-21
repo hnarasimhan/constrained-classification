@@ -24,7 +24,7 @@ class FrankWolfeClassifier(RandomizedClassifier):
             num_class (int): Number of classes (default: 2)
         """
         if loss_name not in solvers.PERF_CONS_MAP:
-            raise KeyError("No solver found optimizing" + loss_name)
+            raise KeyError("No solver found for optimizing " + loss_name)
         RandomizedClassifier.__init__(self, loss_name, solvers.PERF_CONS_MAP[loss_name], protected_present, num_class)
         self.opt_name = 'coco' # Use COCO solver with no constraints
 
@@ -59,7 +59,7 @@ class BisectionClassifier(RandomizedClassifier):
             num_class (int): Number of classes (default: 2)
         """
         if loss_name not in solvers.PERF_CONS_MAP:
-            raise KeyError("No solver found optimizing " + loss_name)
+            raise KeyError("No solver found for optimizing " + loss_name)
         RandomizedClassifier.__init__(self, loss_name, solvers.PERF_CONS_MAP[loss_name], protected_present, num_class)
         self.opt_name = 'fraco' # Use FRACO solver
 

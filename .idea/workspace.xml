@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e6bfea5c-d1ed-4c6f-aafa-ca2f2a5f14f8" name="Default" comment="deleted old plots">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/batch/hmean-cov-batch.txt" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/batch/hmean-cov-batch.txt" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/plots/hmean-cov-crimes2-batch.npy" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2-batch.npy" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/results/plots/hmean-cov-crimes2.eps" afterPath="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/results/plots/hmean-cov-crimes2.eps" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" afterPath="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
+      <change beforePath="$PROJECT_DIR$/complex_performance_metrics/test.py" afterPath="" />
     </list>
     <ignored path="venv/include/python2.7/" />
     <ignored path="venv/lib/python2.7/config/" />
@@ -28,12 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="expt.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="expt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4568">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-4412">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,18 +60,18 @@
       <file leaf-file-name="run_demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coco_hmean_cov.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py">
+      <file leaf-file-name="expt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/expt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="342" column="55" lean-forward="false" selection-start-line="342" selection-start-column="55" selection-end-line="342" selection-end-column="55" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -105,22 +114,10 @@
       <file leaf-file-name="constrained.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="randomized_classifier.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="93" column="20" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,15 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LinC</find>
-      <find>complex_performance_metrics</find>
-      <find>constrained_classification</find>
-      <find>load</find>
-      <find>obj</find>
-      <find>predic</find>
-      <find>cpe_</find>
-      <find>f</find>
-      <find>max_</find>
       <find>array_like</find>
       <find>utils</find>
       <find>perf_</find>
@@ -166,7 +154,16 @@
       <find>num_inner_iter</find>
       <find>thresh</find>
       <find>lamda</find>
+      <find>GC.</find>
+      <find>eps_l</find>
+      <find>print</find>
+      <find>_unc</find>
+      <find>under</find>
       <find>kld</find>
+      <find>on</find>
+      <find>s.t.</find>
+      <find>print(</find>
+      <find>eps =</find>
     </findStrings>
     <replaceStrings>
       <replace>protected_present</replace>
@@ -210,10 +207,6 @@
         <option value="$PROJECT_DIR$/complex_performance_metrics/__main__.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/models/constrained.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/models/plugin.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/test.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/expt.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
-        <option value="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/utils.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_err_dp.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/coco_hmean_cov.py" />
@@ -222,7 +215,13 @@
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/multiclass/fraco_microF1_cov.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/expt-with-plot.py" />
         <option value="$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/test.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/expt.py" />
+        <option value="$PROJECT_DIR$/complex_performance_metrics/expt.py" />
       </list>
     </option>
   </component>
@@ -265,27 +264,7 @@
               <item name="constrained-classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="constrained-classification" type="462c0819:PsiDirectoryNode" />
               <item name="complex_performance_metrics" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="constrained-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="constrained-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="complex_performance_metrics" type="462c0819:PsiDirectoryNode" />
-              <item name="solvers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="constrained-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="constrained-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="complex_performance_metrics" type="462c0819:PsiDirectoryNode" />
-              <item name="solvers" type="462c0819:PsiDirectoryNode" />
-              <item name="binary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="constrained-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="constrained-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="complex_performance_metrics" type="462c0819:PsiDirectoryNode" />
-              <item name="solvers" type="462c0819:PsiDirectoryNode" />
-              <item name="multiclass" type="462c0819:PsiDirectoryNode" />
+              <item name="backup-not-in-git" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,7 +277,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/complex_performance_metrics" />
       <recent name="$PROJECT_DIR$/constrained_classification/models" />
     </key>
   </component>
@@ -314,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.run_demo">
     <configuration name="__main__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,6 +352,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="run_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/complex_performance_metrics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="complex-performance-measures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/complex_performance_metrics/run_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -387,18 +388,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.__main__" />
       <item index="1" class="java.lang.String" itemvalue="Python.__main__ (1)" />
       <item index="2" class="java.lang.String" itemvalue="Python.__main__ (2)" />
       <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run_demo" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.__main__ (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.__main__" />
-        <item index="3" class="java.lang.String" itemvalue="Python.__main__ (1)" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.run_demo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.__main__ (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.__main__" />
+        <item index="4" class="java.lang.String" itemvalue="Python.__main__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -453,8 +456,8 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2581786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08888889" sideWeight="0.39964634" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.60035366" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962963" sideWeight="0.4040672" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962963" sideWeight="0.5959328" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3206751" sideWeight="0.43255225" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -482,18 +485,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="deleted old plots" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constrained-classification/batch.py" />
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3390">
@@ -609,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -648,7 +638,7 @@
         <state relative-caret-position="287">
           <caret line="70" column="25" lean-forward="true" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,17 +648,7 @@
         <state relative-caret-position="293">
           <caret line="112" column="30" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -686,36 +666,8 @@
         <state relative-caret-position="825">
           <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="60" lean-forward="true" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,10 +687,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt-with-plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4568">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="113" column="111" lean-forward="false" selection-start-line="113" selection-start-column="111" selection-end-line="113" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/constrained.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/binary/fraco_fmeasure_kld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/unconstrained.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="26" column="48" lean-forward="false" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/solvers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="60" lean-forward="true" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -751,18 +751,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="-48">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/models/randomized_classifier.py">
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/backup-not-in-git/expt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="93" column="20" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        <state relative-caret-position="282">
+          <caret line="342" column="55" lean-forward="false" selection-start-line="342" selection-start-column="55" selection-end-line="342" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/run_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complex_performance_metrics/expt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4412">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
